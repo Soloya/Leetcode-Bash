@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Solution {
 
-	//Best方法，利用正数的原码与负数的补码进行位运算的性质
+	//Best&simplest鏂规硶锛屽埄鐢ㄦ鏁扮殑鍘熺爜涓庤礋鏁扮殑琛ョ爜杩涜浣嶈繍绠楃殑鎬ц川,2ms
 	public Boolean isPowerOfTwo(int n){
-		if(n==0){
+		if(n<=0){
 			return false;
 		}
 		return n==(n & -n);
