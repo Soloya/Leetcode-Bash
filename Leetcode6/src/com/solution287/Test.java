@@ -13,6 +13,9 @@ public class Test{
 				res=nums[x];
 				break;
 			}
+			else{
+				continue;
+			}
 		}
 		return res;
     }
