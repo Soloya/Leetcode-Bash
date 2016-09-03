@@ -18,7 +18,7 @@ public class HashMethod {
 		
 		for(int j=0;j<i;j++){
 			int value=target-nums[j];
-			if(map.containsKey(value)&&j!=map.get(value)){//瑙勯伩index[0]涓巌ndex[1]鐩哥瓑
+			if(map.containsKey(value)&&j!=map.get(value)){//规避index[0]与index[1]相等
 				index[0]=j;
 				index[1]=map.get(value);
 			}
@@ -33,7 +33,7 @@ public class HashMethod {
 	}
 	
 	public static void main(String[] args){
-		System.out.println("璇疯緭鍏ヤ竴涓暟缁勶紝鏁扮粍鍚勫厓绱犻棿浠ラ�楀彿鍒嗛殧");
+		System.out.println("请输入一个数组，数组各元素间以逗号分隔");
 		Scanner sc=new Scanner(System.in);
 		String str=sc.nextLine();
 		String[] num1=str.split(",");
@@ -43,11 +43,19 @@ public class HashMethod {
 			nums[i]=Integer.parseInt(num1[i]);
 		}
 		
-		System.out.println("璇疯緭鍏ョ洰鏍囧拰");
+		System.out.println("请输入目标和");
 		int target=sc.nextInt();
 		
 		HashMethod exp=new HashMethod();
 		int[] index=exp.TwoSum(nums, target);
+	/*	if (index[0]==index[1])
+		{
+			System.out.println("不存在两个数组元素的和为该数");
+		}
+		else
+		{
+			System.out.println("index1="+index[0]+",index2="+index[1]);
+		}*/
 		System.out.println("index1="+index[0]+",index2="+index[1]);
 	}
 }

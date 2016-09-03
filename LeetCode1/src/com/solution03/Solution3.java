@@ -4,22 +4,22 @@ import java.util.Scanner;
 
 public class Solution3 {
 	
-	public int LengthOfLongestSubstring(String s)//æœ‰è¿”å›žçš„å®žä¾‹æ–¹æ³•
+	public int LengthOfLongestSubstring(String s)//ÓÐ·µ»ØµÄÊµÀý·½·¨
 	{
-		int[] length=new int[255];//æ ‡è®°æ•°ç»„
+		int[] length=new int[255];//±ê¼ÇÊý×é
 		int[] longest=new int[s.length()];
 		char[] ch=s.toCharArray();
 		int count=0;
 		int t=0;
 		for(int i=0;i<s.length();i++)
 		{
-			length[i]=(int)ch[i];//è½¬åŒ–ä¸ºæ•´å½¢æ•°ç»„
+			length[i]=(int)ch[i];//×ª»¯ÎªÕûÐÎÊý×é
 		}
 		
 		for(int j=0;j<s.length();j++)
 		{
 			int k=j+1;
-			if(length[j]==length[k] || k==s.length())//ç»Ÿè®¡åˆ°å‡ºçŽ°é‡å¤å­—ç¬¦ä¸ºæ­¢çš„ä¸€æ®µé•¿åº¦
+			if(length[j]==length[k] || k==s.length())//Í³¼Æµ½³öÏÖÖØ¸´×Ö·ûÎªÖ¹µÄÒ»¶Î³¤¶È
 			{
 				longest[j]=k-j;
 			}
@@ -40,11 +40,12 @@ public class Solution3 {
 	
 	public static void main(String[] args)
 	{
-		System.out.println("è¯·è¾“å…¥å­—ç¬¦ä¸²");
+		System.out.println("ÇëÊäÈë×Ö·û´®");
 		Scanner sc=new Scanner(System.in);
 		String s1=sc.nextLine();
 		Solution3 exp=new Solution3();
 		int longest=exp.LengthOfLongestSubstring(s1);
-		System.out.println("å­—ç¬¦ä¸²çš„æœ€å¤§å­ä¸²é•¿åº¦æ˜¯"+longest);
+		System.out.println("×Ö·û´®µÄ×î´ó×Ó´®³¤¶ÈÊÇ"+longest);
 	}
+
 }

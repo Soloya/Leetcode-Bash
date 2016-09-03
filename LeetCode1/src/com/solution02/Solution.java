@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Solution {
 	
-	public ListNode addTwoNumbers(ListNode l1,ListNode l2){//æœ‰è¿”å›žçš„å®žä¾‹æ–¹æ³•
+	public ListNode addTwoNumbers(ListNode l1,ListNode l2){//ÓÐ·µ»ØµÄÊµÀý·½·¨
 		ListNode l3=new ListNode(0);
-		int adding=0;//è¿›ä½ç¬¦
+		int adding=0;//½øÎ»·û
 		while(l1!=null && l2!=null)
 		{
 			int a=l1.val;
@@ -23,17 +23,17 @@ public class Solution {
 	
 	public static void main(String[] args)
 	{
-		System.out.println("è¯·è¾“å…¥ç¬¬ä¸€ç»„æ•°æ®");
+		System.out.println("ÇëÊäÈëµÚÒ»×éÊý¾Ý");
 		Scanner sc=new Scanner(System.in);
 		String s1=sc.nextLine();
 		String[] num1=s1.split("->");
-		ListNode l1=new ListNode(0);//å®žä¾‹ç»“ç‚¹
-		ListNode link2=new ListNode(0);//å®žä¾‹ç»“ç‚¹
-		ListNode head1=new ListNode(0);//å¤´ç»“ç‚¹
-		ListNode tail1=null;//å°¾ç»“ç‚¹
-		ListNode head2=new ListNode(0);//å¤´ç»“ç‚¹
-		ListNode tail2=null;//å°¾ç»“ç‚¹
-		for(int i=0;i<num1.length;i++)//å¤´æ’æ³•å»ºç«‹å•é“¾è¡¨;ç±»stackç»“æž„ï¼Œå…ˆå…¥åœ¨åŽ
+		ListNode l1=new ListNode(0);//ÊµÀý½áµã
+		ListNode link2=new ListNode(0);//ÊµÀý½áµã
+		ListNode head1=new ListNode(0);//Í·½áµã
+		ListNode tail1=null;//Î²½áµã
+		ListNode head2=new ListNode(0);//Í·½áµã
+		ListNode tail2=null;//Î²½áµã
+		for(int i=0;i<num1.length;i++)//Í·²å·¨½¨Á¢µ¥Á´±í;Ààstack½á¹¹£¬ÏÈÈëÔÚºó
 		{
 			head1.next=l1;
 			l1.next=tail1;
@@ -41,11 +41,11 @@ public class Solution {
 			tail1=l1;
 		}
 		
-		System.out.println("è¯·è¾“å…¥ç¬¬äºŒç»„æ•°æ®");
+		System.out.println("ÇëÊäÈëµÚ¶þ×éÊý¾Ý");
 		String s2=sc.nextLine();
 		String[] num2=s2.split("->");
 		
-		for(int i=0;i<num2.length;i++)//å¤´æ’æ³•å»ºç«‹å•é“¾è¡¨;ç±»stackç»“æž„ï¼Œå…ˆå…¥åœ¨åŽ
+		for(int i=0;i<num2.length;i++)//Í·²å·¨½¨Á¢µ¥Á´±í;Ààstack½á¹¹£¬ÏÈÈëÔÚºó
 		{
 			head2.next=link2;
 			link2.next=tail2;
@@ -55,8 +55,11 @@ public class Solution {
 		
 		Solution so=new Solution();
 		ListNode l3=so.addTwoNumbers(l1, link2);
-
+		
+		
+		
 	/*	Solution output=new Solution();
+		
 		ListNode result=output.addTwoNumbers(l1, l2);
 		System.out.println(result.val);
 		*/
