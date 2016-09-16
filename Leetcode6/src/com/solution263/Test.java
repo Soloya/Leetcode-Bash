@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Test {
 
-	public boolean isUgly(int num) {//·ÖÖ§ÅÐ¶Ï·¨
+	public boolean isUgly(int num) {//分支判断法
 		if(num<=0){
 			return false;
 		}
